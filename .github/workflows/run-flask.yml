@@ -25,6 +25,6 @@ jobs:
 
       - name: Run Flask app
         run: |
-          nohup python app.py &
+          nohup python checkHealth.py &
           sleep 5
           curl http://localhost:5000
