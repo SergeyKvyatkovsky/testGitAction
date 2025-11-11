@@ -18,7 +18,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SECRET_ONE }}
         run: |
-          echo "$env:SECRET_ONE"
+          echo $env:SECRET_ONE
 
       - name: Set up Python
         uses: actions/setup-python@v4
