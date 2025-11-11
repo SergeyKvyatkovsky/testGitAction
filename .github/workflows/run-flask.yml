@@ -13,6 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+
+      - shell: pwsh
+        env:
+          SUPER_SECRET: ${{ secrets.SECRET_ONE }}
+        run: |
+          echo "$env:SECRET_ONE"
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
